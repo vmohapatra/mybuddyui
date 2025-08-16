@@ -69,6 +69,11 @@ mybuddyui/
    ```
 
 ## Development
+```bash
+npm run web:dev
+
+http://localhost:5173/
+```
 
 ### Available Scripts
 
