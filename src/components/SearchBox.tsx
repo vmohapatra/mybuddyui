@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 
 interface SearchBoxProps {
   onSearch: (query: string) => void;
@@ -24,7 +23,7 @@ export default function SearchBox({ onSearch }: SearchBoxProps) {
   return (
     <View style={styles.container}>
       <View style={styles.searchContainer}>
-        <Ionicons name="search" size={20} color="#666" style={styles.searchIcon} />
+        <Text style={styles.searchIcon}>🔍</Text>
         <TextInput
           style={styles.input}
           placeholder="Ask me anything..."
@@ -38,7 +37,7 @@ export default function SearchBox({ onSearch }: SearchBoxProps) {
         />
         {query.length > 0 && (
           <TouchableOpacity onPress={() => setQuery('')} style={styles.clearButton}>
-            <Ionicons name="close-circle" size={20} color="#999" />
+            <Text style={styles.clearButtonText}>✕</Text>
           </TouchableOpacity>
         )}
       </View>
@@ -71,6 +70,7 @@ const styles = StyleSheet.create({
   },
   searchIcon: {
     marginRight: 12,
+    fontSize: 20,
   },
   input: {
     flex: 1,
@@ -79,6 +79,10 @@ const styles = StyleSheet.create({
   },
   clearButton: {
     padding: 4,
+  },
+  clearButtonText: {
+    fontSize: 18,
+    color: '#999',
   },
   searchButton: {
     backgroundColor: '#007AFF',
