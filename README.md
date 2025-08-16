@@ -61,14 +61,20 @@ mybuddyui/
    yarn install
    ```
 
+**Run locally on web**
+
+```bash
+npm run web:dev
+
+```
+The server will be available at http://localhost:5173/ and you should be able to see your MyBuddyUI application running in the browser.
+
 3. **Start the development server**
    ```bash
    npm start
    # or
    yarn start
    ```
-
-## Development
 
 ### Available Scripts
 
